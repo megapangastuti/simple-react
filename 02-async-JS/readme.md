@@ -34,4 +34,23 @@
 25. code kita tau history apa yang di klik, itu kekuatan browser
 26. web api => bisa nyalain mic, bisa tau geolocation dll
 27. yang mau kita pake dalam web api = setTimeout, DOM, fetch, localStorage, console, location
-28.
+28. setTimeout => salah satu web API yang asyncronous call back. jadi dia dikerjain dimesin yang berbeda. nah dia nunggu disitu sampe beres
+29. event loop dan callback queue => bagian dari js engine
+30. event loop :
+
+    - Mekanisme yang digunakan oleh JS untuk menangani task yang asinkron (termasuk asynchronous callback)
+    - Bertugas memantau call stack dan antrian callback (call back queue)
+    - event loop tu kayak penjaga pintu bioskop, jadi dia liat kursi bioskop, kalo misal callstack atau bioskop ada yang kosong, task disuruh masuk
+    - Ketika tugas asinkron selesai, callbacknya ditambahkan ke callback queue
+    - Setelah itu, event loop akan memindahkannya ke call stack
+
+31. Callback Queue :
+
+    - Antrian dimana callback disimpan
+
+32. microtask queue => kayak fast track di dufan
+    contoh : fetch api
+33. task queue => antrian reguler dufan
+    contoh : setTimeout
+34. web api setTimeout, DOM, dan fetch itu bersifat async
+35. query selector lebih flexible
