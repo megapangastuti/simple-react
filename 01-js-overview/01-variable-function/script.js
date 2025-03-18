@@ -1,4 +1,4 @@
-// example 1
+// example 1 : execution context
 var x = 10;
 
 function halo() {
@@ -12,7 +12,7 @@ console.log(y);
 
 var y = 10;
 
-// example 2
+// example 2 : execution context 2
 var n = 3;
 
 function kuadrat(n) {
@@ -26,7 +26,7 @@ var kuadrat2 = kuadrat(8);
 console.log(kuadrat1);
 console.log(kuadrat2);
 
-// example 3
+// example 3 : execution context 3
 
 function funcA(m, n) {
   return m * n;
@@ -44,7 +44,7 @@ var res = getResult(5, 6);
 
 console.log(res);
 
-// example 4 - scope
+// example 4 : scope
 
 function a() {
   var b = 10;
@@ -57,7 +57,7 @@ function a() {
 
 a();
 
-// example 5 - hoisting, let, const
+// example 5 : hoisting, let, const
 halo();
 console.log(x);
 
@@ -76,13 +76,13 @@ console.log(d);
 
 var d = 10;
 
-// example 6 - let & const
+// example 6 : let & const
 
 let m = 10;
 m = 100;
 console.log(m);
 
-// example 7 - block scope
+// example 7 - block scope, simple closure
 var d = 100;
 let e = 200;
 const f = 300;
@@ -101,7 +101,7 @@ console.log("the value of d : ", d);
 console.log("the value of e : ", e);
 console.log("the value of f : ", f);
 
-// example 8 - simple closure
+// example 8 : simple closure
 
 function lapan() {
   let a = 10;
@@ -114,7 +114,7 @@ function lapan() {
 let z = lapan();
 z();
 
-// example 9 - enkapsulasi data
+// example 9 : enkapsulasi data
 let angka = 0;
 
 function counter() {
@@ -126,7 +126,7 @@ counter();
 counter();
 counter();
 
-// example 10 - enkapsulasi data(problem)
+// example 10 : enkapsulasi data(problem)
 
 function counter() {
   let angkaa = 0;
@@ -147,7 +147,7 @@ counterBaru();
 counterBaru();
 counterBaru();
 
-// example 11 - closure: fungsi setengah jadi
+// example 11 : closure: fungsi setengah jadi
 
 function buatPenambah(x) {
   return function (y) {

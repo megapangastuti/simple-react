@@ -7,13 +7,38 @@ let helo = function () {
 
 helo();
 
-// function declaration
+// 1. Function Declaration
 function Huwello() {
   console.log("Hello world");
 }
 
-// 02. dikirim sebagai argumen
+// 2. Function Expression
+const validasiPassword = function (password) {
+  return password.length >= 8;
+};
 
+// 3. Arrow Function
+const passwordValidation = (password) => password.length >= 8;
+
+// 4. Function sebagai object yang memiliki property
+function contoh() {
+  contoh.properti = "Properti Fungsi";
+}
+
+contoh();
+console.log(contoh.properti);
+
+// 5. Function dikembalikan dari function lain
+function buatPengali(pengali) {
+  return function (angka) {
+    return angka * pengali;
+  };
+}
+
+const pengaliDua = buatPengali(2);
+console.log(pengaliDua(5));
+
+// 6. Function dikirim sebagai argumen (callback)
 function sapa(nama, sapaan) {
   sapaan(nama);
 }
@@ -31,18 +56,6 @@ sapa("Mega", function (nama) {
   console.log("Huwalaw, " + nama + "!");
 });
 
-// 03.  Function dikembalikan dari function lain
-function buatPengali(pengali) {
-  function pengaliKedua(angka) {
-    return angka * pengali;
-  }
-
-  return pengaliKedua;
-}
-
-const pengaliDua = buatPengali(2);
-console.log(pengaliDua(5));
-
 // 04. object yang memiliki property
 
 function contoh() {
@@ -50,11 +63,6 @@ function contoh() {
 }
 
 // 05. Perbedaan Jenis Function
-
-// Function declaration
-function validasiPassword(password) {
-  return password.length >= 8;
-}
 
 // function expression
 // const validasiPassword = function(password);
